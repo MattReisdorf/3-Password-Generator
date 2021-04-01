@@ -46,6 +46,8 @@ function generatePassword() {
 
 
   // Actual Password Generation                                         //4 BIT TRUTH TABLE
+  
+  // All Characters
   if (lowerCase && upperCase && numericCh && specialCh) {               // 1 1 1 1
     console.log("ALL CHARACTERS");
     console.log(allCharacters);  
@@ -59,7 +61,8 @@ function generatePassword() {
     }             
     return password;                                                                      //Return the Password from the Function
   }                                                                     
-
+  
+  // No Special Characters
   else if (lowerCase && upperCase && numericCh && !specialCh) {         // 1 1 1 0
     console.log("NOT SPECIAL");
     console.log(notSpecial);
@@ -73,7 +76,8 @@ function generatePassword() {
     }
     return password;
   }
-
+  
+  // No Numeric Characters
   else if (lowerCase && upperCase && !numericCh && specialCh) {         // 1 1 0 1
     console.log("NOT NUMERIC");
     console.log(notNumeric);
@@ -87,6 +91,7 @@ function generatePassword() {
     return password;
   }
 
+  // Upper and Lowercase Characters
   else if (lowerCase && upperCase && !numericCh && !specialCh) {        // 1 1 0 0
     console.log("ALL ALPHABET");
     console.log(allAlphabet);
@@ -100,6 +105,7 @@ function generatePassword() {
     return password;
   }
 
+  // No Uppercase Characters
   else if (lowerCase && !upperCase && numericCh && specialCh) {         // 1 0 1 1
     console.log("NOT UPPERCASE");
     console.log(notUpperCase);
@@ -113,6 +119,7 @@ function generatePassword() {
     return password;
   }
 
+  // Lowercase and Numeric Characters
   else if (lowerCase && !upperCase && numericCh && !specialCh) {        // 1 0 1 0
     console.log("LOWERCASE AND NUMERIC");
     console.log(lowerCaseAndNumeric);
@@ -126,6 +133,7 @@ function generatePassword() {
     return password;
   }
 
+  // Lowercase and Special Characters
   else if (lowerCase && !upperCase && !numericCh && specialCh) {        // 1 0 0 1
     console.log("LOWERCASE AND SPECIAL");
     console.log(lowerCaseAndSpecial);
@@ -139,6 +147,7 @@ function generatePassword() {
     return password;
   }
 
+  // Only Lowercase Characters
   else if (lowerCase && !upperCase && !numericCh && !specialCh) {       // 1 0 0 0 
     console.log("ONLY LOWERCASE");
     console.log(lcOnly);
@@ -152,6 +161,7 @@ function generatePassword() {
     return password;
   }
 
+  // No Lowercase Characters
   else if (!lowerCase && upperCase && numericCh && specialCh) {         // 0 1 1 1
     console.log("NOT LOWERCASE")
     console.log(notLowerCase);
@@ -165,6 +175,7 @@ function generatePassword() {
     return password;
   }
 
+  // Uppercase and Numeric Characters
   else if (!lowerCase && upperCase && numericCh && !specialCh) {        // 0 1 1 0
     console.log("UPPERCASE AND NUMERIC")
     console.log(upperCaseAndNumeric);
@@ -178,6 +189,7 @@ function generatePassword() {
     return password;
   }
 
+  // Uppercase and Special Characters
   else if (!lowerCase && upperCase && !numericCh && specialCh) {        // 0 1 0 1
     console.log("UPPERCASE AND SPECIAL")
     console.log(upperCaseAndSpecial);
@@ -191,6 +203,7 @@ function generatePassword() {
     return password;
   }
 
+  // Only Uppercase Characters
   else if (!lowerCase && upperCase && !numericCh && !specialCh) {       // 0 1 0 0
     console.log("ONLY UPPERCASE")
     console.log(ucOnly);
@@ -204,6 +217,7 @@ function generatePassword() {
     return password;
   }
 
+  // Numeric and Special Characters
   else if (!lowerCase && !upperCase && numericCh && specialCh) {        // 0 0 1 1
     console.log("NUMERIC AND SPECIAL")
     console.log(numericAndSpecial);
@@ -217,6 +231,7 @@ function generatePassword() {
     return password;
   }
 
+  // Only Numeric Characters
   else if (!lowerCase && !upperCase && numericCh && !specialCh) {       // 0 0 1 0
     console.log("ONLY NUMERIC")
     console.log(numericASCII);
@@ -230,6 +245,7 @@ function generatePassword() {
     return password;
   }
 
+  // Only Special Characters
   else if (!lowerCase && !upperCase && !numericCh && specialCh) {       // 0 0 0 1
     console.log("ONLY SPECIAL")
     console.log(specialASCII);
@@ -243,6 +259,7 @@ function generatePassword() {
     return password;
   }
 
+  // No Character Type Selection
   else {                                                                // 0 0 0 0 
     alert("You must have some character type selected");
   }
